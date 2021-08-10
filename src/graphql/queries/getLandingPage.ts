@@ -52,8 +52,18 @@ const GET_LANDING_PAGE = gql`
     sectionConcepts {
       title
       concepts {
-        id
         title
+      }
+    }
+  }
+
+  fragment sectionModules on LandingPage {
+    sectionModules {
+      title
+      modules {
+        title
+        subtitle
+        description
       }
     }
   }
@@ -65,6 +75,7 @@ const GET_LANDING_PAGE = gql`
       ...sectionAboutProject
       ...sectionTech
       ...sectionConcepts
+      ...sectionModules
     }
   }
 `
