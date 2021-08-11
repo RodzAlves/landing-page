@@ -36,6 +36,7 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.14.9",
     "@netlify/plugin-nextjs": "^3.8.0",
     "graphql": "^15.5.1",
     "graphql-request": "^3.5.0",
