@@ -107,6 +107,20 @@ const GET_LANDING_PAGE = gql`
     }
   }
 
+  fragment sectionReviews on LandingPage {
+    sectionReviews {
+      title
+      reviews {
+        name
+        text
+        photo {
+          alternativeText
+          url
+        }
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       ...logo
@@ -118,6 +132,7 @@ const GET_LANDING_PAGE = gql`
       ...sectionAgenda
       ...pricingBox
       ...sectionAuthors
+      ...sectionReviews
     }
   }
 `
